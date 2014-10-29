@@ -35,3 +35,5 @@ head -n 1)
 cat test.txt.processed.word | 
 awk -v num=$num '{if(NR>=num && NR <= num+2) print $0}' | 
 tr -d "\n"
+
+rm test.txt.processed.word test.txt.processed.head*
