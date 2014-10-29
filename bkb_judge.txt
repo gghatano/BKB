@@ -4,16 +4,18 @@ s t m
 t m g
 m g n
 g n b
-n b s
-b s n
-s n k
+n b k
+b k b
+k b n
+b n k
 n k n
 k n h
 n h b
 h b k
 b k b
-k b 
-b  s
+k b t
+b t 
+t  s
  s n
 s n i
 n i o
@@ -33,8 +35,9 @@ n  g
  g b
 g b k
 b k b
-k b o
-b o k
+k b n
+b n o
+n o k
 o k s
 k s t
 s t t
