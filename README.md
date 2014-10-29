@@ -58,10 +58,23 @@
 
 B/K/B 
 
+[kakasi](http://kakasi.namazu.org)を使います. 
+
+```{sh}
+> echo "アイウエオ" | nkf -e | kakasi -Ka
+aiueo
+
+> echo "バカボ" | nkf -e | kakasi -Ka 
+bakabo
+```
+
 3. BKB判定
 
-B!K!B! ひぃ～ぁ!!
+bkb! 
 
+4. ひぃ～ぁ!!
+
+ひぃ～ぁ!!
 
 === 
 
@@ -79,8 +92,6 @@ B!K!B! ひぃ～ぁ!!
 - カタカナ変換の手法
 
   - [kakasi](http://www.mk-mode.com/octopress/2014/04/27/linux-replacement-by-kakasi/)
-
-  - [makimoto/romaji](http://blog.morizotter.com/2013/05/26/ruby-kana-romaji/)
 
 - BKB判定
 
