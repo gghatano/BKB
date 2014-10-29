@@ -30,8 +30,11 @@ t  n
  n n
 n n 
 n  g
- g o
-g o k
+ g b
+g b k
+b k b
+k b o
+b o k
 o k s
 k s t
 s t t
@@ -48,3 +51,4 @@ i s t
 s t i
 t i 
 i  
+  
