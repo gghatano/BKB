@@ -74,23 +74,21 @@ BKB!
 
 ## 用意するもの
 
-- 文書データの用意
+- 文書データ
   
   - Wikipedia? Twitter? ニコニコ大辞典?
 
-- 文節区切り 
+- 文節区切り: cabocha 
 
-  - mecabでいける? 簡単ではないらしい. 
+  - [Cabocha](https://code.google.com/p/cabocha/)で出来る.
 
-  - [Cabocha](https://code.google.com/p/cabocha/)で出来るかも.
+- 読み方取得: mecab
+  
+- カタカナ変換の手法: kakasi
 
-- カタカナ変換の手法
+  - [kakasi](http://www.mk-mode.com/octopress/2014/04/27/linux-replacement-by-kakasi/)を利用
 
-  - [kakasi](http://www.mk-mode.com/octopress/2014/04/27/linux-replacement-by-kakasi/)
-
-- ツイッターアカウント
-
-- BKB判定の基準
+- Twitterアカウント
 
 
 ## 進捗
@@ -112,8 +110,10 @@ B! K! B!
 ひぃーあ!!
 ```
 
-
 ## 次にやること
 
-
 - 文章の用意
+
+- BKBの保存
+
+- 結果ツイート

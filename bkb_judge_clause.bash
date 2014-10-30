@@ -48,7 +48,7 @@ grep -n "b k b" |
 awk -F":" '{print $1}')
 
 ## BKBがなかったら終了
-[ "$num" == "" ] && { echo "$pid:NOBKB" ; exit 0; }
+[ "$num" == "" ] && { echo "$pid:NOBKB" ; ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
 
 ## あったらBKB
 echo $input
@@ -59,4 +59,5 @@ xargs echo
 echo "B! K! B!"
 echo "ひぃーあ!!"
 
-
+## ゴミ掃除
+ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm 
