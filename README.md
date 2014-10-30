@@ -100,30 +100,23 @@ BKB!
 
 - 単語BKB 
 
-  - ./find_bkb.bash に標準入力で文章を流すと, 単語BKBを探してくれます. 
-
-  - EX: 
+  - ./bkb_judge_word.bash に標準入力で1文を流すと, 単語BKBを探してくれます. 
 
 - 文節BKB
 
-  - ./makeClause.bashに標準入力で1文を流すと, 文節BKBしてくれます. 
+  - ./bkb_judge_clause.bashに標準入力で1文を流すと, 文節BKBしてくれます. 
 
-  - cat example.txt | ./makeClause.bash 
 
 ```{sh}
->cat example.txt | ./makeClause.bash
+> cat example.txt | ./bkb_judge_clause.bash 
 いずれにしても現代の陪審制の形成についてはバイクと12世紀のイングランド王ヘンリー2世の設けた制度と1215年のマグナ・カルタがバイク川崎バイク大きく寄与したという点で多くの歴史家が一致している
 陪審制の 形成については バイクと
 B! K! B!
 ひぃーあ!!
- 
-
 ```
 
 
 ## 次にやること
 
-- 文節に区切るbashスクリプト
 
-- 入力を文で区切って, bkbリストを作成するスクリプト
-
+- 文章の用意
