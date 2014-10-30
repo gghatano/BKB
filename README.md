@@ -1,9 +1,6 @@
 日常に潜むBKBを発見する
 ====
 
-## branch::clause
-文節で区切ります. 
-
 ## 概要
 
 [バイク川崎バイク](http://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&cad=rja&uact=8&ved=0CD8QFjAE&url=http%3A%2F%2Fmatome.naver.jp%2Fodai%2F2137761151482905501&ei=nyxQVLTXJYLPmwXhwIAw&usg=AFQjCNHYtnid7__OztJNegBrbPjaYGLx-A&sig2=EIDB4d-4EHlLfPwFV8xAEA&bvm=bv.78597519,d.dGY)を自動生成します. 
