@@ -1,7 +1,9 @@
 #!/bin/bash
 
-cat sentence.txt|
- sed -e 's/\[[^]]*\]//g' -e 's/([^)]*)//g' -e 's/\s\s*//g' | 
- tr '。' '\n' | 
- sed 's/、//g'
+cat - |
+sed -e 's/\[[^]]*\]//g' -e 's/([^)]*)//g' | 
+sed -e 's/\s\s*//g' | 
+sed -e 's/（[^）]*）//g' -e 's/、/, /g' -e 's/[「」]/, /g'| 
+tr -d ',' | 
+tr '。' '\n' 
 
