@@ -1,0 +1,37 @@
+n n k
+n k r
+k r d
+r d h
+d h n
+h n r
+n r a
+r a n
+a n i
+n i h
+i h k
+h k g
+k g d
+g d s
+d s s
+s s b
+s b i
+b i d
+i d s
+d s k
+s k d
+k d r
+d r s
+r s r
+s r t
+r t i
+t i t
+i t m
+t m g
+m g g
+g g s
+g s d
+s d i
+d i t
+i t 
+t  
+  

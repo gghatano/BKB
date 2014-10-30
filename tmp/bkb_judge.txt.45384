@@ -1,0 +1,34 @@
+1 n 9
+n 9 t
+9 t 3
+t 3 n
+3 n n
+n n h
+n h j
+h j r
+j r t
+r t k
+t k d
+k d k
+d k n
+k n h
+n h s
+h s g
+s g t
+g t s
+t s d
+s d o
+d o r
+o r s
+r s n
+s n t
+n t k
+t k u
+k u g
+u g k
+g k s
+k s r
+s r t
+r t 
+t  
+  
