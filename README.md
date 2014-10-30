@@ -1,6 +1,9 @@
 日常に潜むBKBを発見する
 ====
 
+## branch::clause
+文節で区切ります. 
+
 ## 概要
 
 [バイク川崎バイク](http://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&cad=rja&uact=8&ved=0CD8QFjAE&url=http%3A%2F%2Fmatome.naver.jp%2Fodai%2F2137761151482905501&ei=nyxQVLTXJYLPmwXhwIAw&usg=AFQjCNHYtnid7__OztJNegBrbPjaYGLx-A&sig2=EIDB4d-4EHlLfPwFV8xAEA&bvm=bv.78597519,d.dGY)を自動生成します. 
@@ -80,7 +83,9 @@ BKB!
 
 - 文節区切り 
 
-  - mecabでいける? 簡単ではないらしい
+  - mecabでいける? 簡単ではないらしい. 
+
+  - [Cabocha](https://code.google.com/p/cabocha/)で出来るかも.
 
 - カタカナ変換の手法
 
@@ -93,21 +98,27 @@ BKB!
 
 ## 進捗
 
-とりあえず単語レベルから. 
+- 単語BKB 
 
-- mecabで1文を単語分割.
+  - ./find_bkb.bash に標準入力で文章を流すと, 単語BKBを探してくれます. 
 
-- kakasiで単語の先頭文字アルファベットリストを作る
+  - EX: 
 
-- 1つずらし, 2つずらしのものと結合. b k b を探す. 
+- 文節BKB
 
-- 単語分割からbkbをゲット
+  - ./makeClause.bashに標準入力で1文を流すと, 文節BKBしてくれます. 
 
-出来た? 
+  - cat example.txt | ./makeClause.bash 
 
-ゴミ掃除した文章を, 標準入力でbkb_judge.bashに流すと, BKBを探してくれます.
+```{sh}
+>cat example.txt | ./makeClause.bash
+いずれにしても現代の陪審制の形成についてはバイクと12世紀のイングランド王ヘンリー2世の設けた制度と1215年のマグナ・カルタがバイク川崎バイク大きく寄与したという点で多くの歴史家が一致している
+陪審制の 形成については バイクと
+B! K! B!
+ひぃーあ!!
+ 
 
-ゴミ掃除: () [] を除く 
+```
 
 
 ## 次にやること

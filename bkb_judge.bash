@@ -10,6 +10,7 @@ echo $input |
 mecab | 
 sed 's/*/.../g' | 
 awk -F "," '{print $1, $8}' | 
+awk '{if($3=="")print $1,$2,$1; else print $0}' | 
 awk '{if(NF>=1) print $1}' > $dir/tmp/text.word.$pid
 
 
@@ -19,6 +20,7 @@ head -n 1 |
 mecab | 
 sed 's/*/.../g' | 
 awk -F "," '{print $1, $8}' | 
+awk '{if($3=="")print $1,$2,$1; else print $0}' | 
 awk '{print $3}' | 
 nkf -e | 
 kakasi -Ka | 
