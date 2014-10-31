@@ -76,7 +76,7 @@ BKB!
 
 - 文書データ
   
-  - Wikipedia? Twitter? ニコニコ大辞典?
+  - 青空文庫をスクレイプして用意
 
 - 文節区切り: cabocha 
 
@@ -114,6 +114,8 @@ B! K! B!
 
 - 文章の用意 : aozora文庫 坂口安吾の文書440本でやってます. 
 
-- BKBの保存: 結果の確認がまだ. illegal byte なんちゃらで結構怒られてます. processがいまいちだろうと. 
+- 環境の確認 : mecab, kakasi, kabochaのインストールがそれぞれ結構面倒だから, 利用されづらい?
+
+- BKBの保存: 結果の確認がまだ. illegal byte なんちゃらで結構怒られてます. text_processがイマイチなのだろう
 
 - 結果ツイート

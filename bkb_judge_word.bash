@@ -40,7 +40,8 @@ grep -n "b k b" |
 awk -F":" '{print $1}' | 
 head -n 1)
 
-[ "$num" == "" ] && { echo "$pid NO BKB"; ls $dir/tmp | grep $pid | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
+# [ "$num" == "" ] && { echo "$pid NO BKB"; ls $dir/tmp | grep $pid | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
+[ "$num" == "" ] && { ls $dir/tmp | grep $pid | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
 
 ## BKBを出力: num, num+1, num+2の行
 bkb=$(cat $dir/tmp/text.word.$pid | 
