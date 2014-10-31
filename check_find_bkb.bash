@@ -2,7 +2,8 @@
 
 set -e 
 
-for file in `ls ~/works/aozora_scrape/person1403/text_processed `
+corpus=$1
+for file in `ls $corpus`
 do
-  ./find_bkb.bash ~/works/aozora_scrape/person1403/text_processed/$file
+  ./find_bkb.bash $coupus/$file
 done

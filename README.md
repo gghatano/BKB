@@ -101,6 +101,10 @@ BKB!
 
   - ./bkb_judge_clause.bashに標準入力で1文を流すと, 文節BKBしてくれます. 
 
+- 探索スクリプト
+  
+  - ./check_find_bkb.bash の中に書いてあります. 整形した文を用意すれば, 潜んでいるBKBが./bkb/に入ります. 
+
 
 ```{sh}
 > cat example.txt | ./bkb_judge_clause.bash 
@@ -112,10 +116,9 @@ B! K! B!
 
 ## 次にやること
 
-- 文章の用意 : aozora文庫 坂口安吾の文書440本でやってます. 
+- 文章の用意 : aozora文庫
 
 - 環境の確認 : mecab, kakasi, kabochaのインストールがそれぞれ結構面倒だから, 利用されづらい?
 
 - BKBの保存: 結果の確認がまだ. illegal byte なんちゃらで結構怒られてます. text_processがイマイチなのだろう
 
-- 結果ツイート

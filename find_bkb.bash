@@ -18,3 +18,7 @@ do
   filename=$(basename $file .html)
   echo $line | $dir/bkb_judge_clause.bash >> $dir/bkb/bkb_clause.txt.$filename
 done
+
+## ゴミ掃除
+
+
