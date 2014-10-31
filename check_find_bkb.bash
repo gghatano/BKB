@@ -2,7 +2,7 @@
 
 set -e 
 
-for file in `ls ~/works/aozora_scrape/sakaguchi_ango/processed_text | tail -n 100`
+for file in `ls ~/works/aozora_scrape/person1403/text_processed `
 do
-  ./find_bkb.bash ~/works/aozora_scrape/sakaguchi_ango/processed_text/$file
+  ./find_bkb.bash ~/works/aozora_scrape/person1403/text_processed/$file
 done
