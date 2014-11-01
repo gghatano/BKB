@@ -5,5 +5,8 @@ set -e
 corpus=$1
 for file in `ls $corpus`
 do
-  ./find_bkb.bash $coupus/$file
+  echo $file
+  ./find_bkb.bash $corpus/$file
 done
+
+ls -ltr bkb | awk '{if($5==0) print $9}' | xargs rm

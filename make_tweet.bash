@@ -1,9 +1,9 @@
 #!/bin/bash
 
 set +e
-for num in `seq 65 5`
+for num in `seq 50 5`
 do
-  tweet=$(cat ./bkb/tweet/${num}.txt | tr '\n' ':')
+  tweet=$(cat ./bkb.bak/tweet/${num}.txt | tr '\n' ':')
 
   cat ~/bkb_tweet.R |
   sed "s;test;$tweet;" |

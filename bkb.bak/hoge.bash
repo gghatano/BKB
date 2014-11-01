@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat hoge.txt | while read line
+cat ./bkb.txt.akutagawa | while read line
 do
   num=$(echo $line | awk -F":" '{print $1}')
   char=$(echo $line | awk -F":" '{print $2}')
