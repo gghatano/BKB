@@ -2,8 +2,10 @@
 
 set -e 
 
+## 文書ファイルが入ったディレクトリを引数に.
+
 corpus=$1
-for file in `ls $corpus`
+for file in `ls $corpus | head -n 2`
 do
   echo $file
   ./find_bkb.bash $corpus/$file

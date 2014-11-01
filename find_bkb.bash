@@ -12,6 +12,7 @@ echo $time
 cat $file | while read line
 do
   filename=$(basename $file .html)
+  echo $filename
   echo $line | $dir/text_process.bash |
   $dir/bkb_judge_word.bash >> $dir/bkb/$time/bkb_word.txt.$filename
 done
@@ -21,9 +22,12 @@ echo $file
 cat $file | while read line
 do
   filename=$(basename $file .html)
+  echo $filename
   echo $line | $dir/text_process.bash |
   $dir/bkb_judge_clause.bash >> $dir/bkb/$time/bkb_clause.txt.$filename
 done
+
+rm $dir/tmp/*
 
 ## ゴミ掃除
 
