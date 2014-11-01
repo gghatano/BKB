@@ -114,9 +114,11 @@ B! K! B!
 
 ## 次にやること
 
-- 文章の用意 : aozora文庫
+- 文章の用意 : aozora文庫. 他にも用意したい
 
-- 環境の確認 : mecab, kakasi, kabochaのインストールがそれぞれ結構面倒だから, 利用されづらい?
+- 環境の確認 : mecab, kakasi, kabochaのインストールがそれぞれ結構面倒
 
-- BKBの保存: 結果の確認がまだ. illegal byte なんちゃらで結構怒られてます. text_processがイマイチなのだろう
+- BKBの保存: 結果の確認がまだ. illegal byte なんちゃらで結構怒られる. text_processがイマイチなのだろう
+
+- 単語BKBは自動詞から始めたい
 
