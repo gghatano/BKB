@@ -15,5 +15,5 @@ while true ; do
   cat ~/bkb_tweet.R | sed "s/test/$tweet_contents/" | 
   tr ':' '\n' > ~/bkb_tweet.R.test
   R -f ~/bkb_tweet.R.test
-  sleep 10
+  sleep 1000
 done
