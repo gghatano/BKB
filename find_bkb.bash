@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 dir=$(dirname $0)
 
 file=$1
@@ -13,7 +14,7 @@ cat $file | while read line
 do
   filename=$(basename $file .html)
   echo $filename
-  echo $line | $dir/text_process.bash |
+  echo $line | 
   $dir/bkb_judge_word.bash >> $dir/bkb/$time/bkb_word.txt.$filename
 done
 
@@ -23,11 +24,11 @@ cat $file | while read line
 do
   filename=$(basename $file .html)
   echo $filename
-  echo $line | $dir/text_process.bash |
+  echo $line |
   $dir/bkb_judge_clause.bash >> $dir/bkb/$time/bkb_clause.txt.$filename
 done
 
-rm $dir/tmp/*
+# rm $dir/tmp/*
 
 ## ゴミ掃除
 
