@@ -22,25 +22,27 @@ grep -v "^OS$" |
 grep -v "^EOS$" > $dir/tmp/clause.txt.$pid
 
 ## 文節先頭文字抽出からのローマ字変換
+echo $input 
+# > $dir/tmp/clause.head.txt.$pid
 echo $input | 
 nkf -e |
 cabocha | 
 nkf -w8 |
-sed 's/<[^>]*>//g' |
 awk -F "-" '{print $1}' | 
 sed 's/ *//g' | 
-sed '1s/^/先頭行\n/' | 
-nkf -e |
+sed 's/<[^>]*>//g' |
+grep -v "^OS$" | 
+grep -v "^EOS$" | 
+sed '1s/^/hoge\n/'|
+nkf -e | 
 mecab | 
-nkf -w8 |
-grep -A 1 "^EOS$" | 
-grep -v "EOS" | 
-grep -v "-" | 
-awk -F "," '{print $8}' | 
-cut -c 1 | 
+nkf -w8 | 
+grep -A 1 "EOS" | 
+grep -v "EOS" | grep -v "-" | 
+awk -F"," '{print $9}' | 
 nkf -e | 
 kakasi -Ka | 
-nkf -w8 |
+nkf -w8 | 
 cut -c 1 > $dir/tmp/clause.head.txt.$pid
 
 ## BKB判定
@@ -57,7 +59,7 @@ grep -n "b k b" |
 awk -F":" '{print $1}')
 
 ## BKBがなかったら終了
-## [ "$num" == "" ] && { echo "$pid:NO BKB" ; ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
+[ "$num" == "" ] && { echo "$pid:NO BKB" ; ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
 # [ "$num" == "" ] && { ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
 
 ## あったらBKB
@@ -70,4 +72,4 @@ echo "B! K! B!"
 echo "ひぃーあ!!"
 
 ## ゴミ掃除
-# ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm 
+ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm 
