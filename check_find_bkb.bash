@@ -5,7 +5,7 @@ set +e
 ## 文書ファイルが入ったディレクトリを引数に.
 
 corpus=$1
-for file in `ls $corpus`
+for file in `ls $corpus | grep -v text.txt `
 do
   echo $file
   ./find_bkb.bash $corpus/$file

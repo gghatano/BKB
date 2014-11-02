@@ -17,7 +17,7 @@ cabocha |
 nkf -w8 |
 awk -F "-" '{print $1}' | 
 sed 's/ *//g' | 
-sed 's/<[^>]*>//g' |
+sed 's1/<[^>]*>//g' |
 grep -v "^OS$" | 
 grep -v "^EOS$" > $dir/tmp/clause.txt.$pid
 
@@ -57,7 +57,7 @@ grep -n "b k b" |
 awk -F":" '{print $1}')
 
 ## BKBがなかったら終了
-## [ "$num" == "" ] && { echo "$pid:NO BKB" ; ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
+[ "$num" == "" ] && { echo "$pid:NO BKB" ; ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
 # [ "$num" == "" ] && { ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
 
 ## あったらBKB

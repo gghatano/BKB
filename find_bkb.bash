@@ -25,7 +25,7 @@ do
   filename=$(basename $file .html)
   echo $filename
   echo $line |
-  $dir/bkb_judge_clause.bash >> $dir/bkb/$time/bkb_clause.txt.$filename
+  $dir/bkb_judge_clause.bash.ubuntu >> $dir/bkb/$time/bkb_clause.txt.$filename
 done
 
 # rm $dir/tmp/*

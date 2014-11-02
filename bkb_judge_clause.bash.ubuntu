@@ -12,19 +12,19 @@ input=$(cat - )
 
 ## 文節分割
 echo $input | 
+sed 's/^/さすがに/' |
 nkf -e |
 cabocha | 
 nkf -w8 |
 awk -F "-" '{print $1}' | 
-sed 's/ *//g' | 
 sed 's/<[^>]*>//g' |
 grep -v "^OS$" | 
 grep -v "^EOS$" > $dir/tmp/clause.txt.$pid
 
 ## 文節先頭文字抽出からのローマ字変換
-echo $input 
 # > $dir/tmp/clause.head.txt.$pid
 echo $input | 
+sed 's/^/さすがに/' |
 nkf -e |
 cabocha | 
 nkf -w8 |
@@ -59,11 +59,11 @@ grep -n "b k b" |
 awk -F":" '{print $1}')
 
 ## BKBがなかったら終了
-[ "$num" == "" ] && { echo "$pid:NO BKB" ; ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
-# [ "$num" == "" ] && { ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
+# [ "$num" == "" ] && { echo "$pid:NO BKB" ; ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
+[ "$num" == "" ] && { ls $dir/tmp | grep "$pid" | sed "s;^;$dir/tmp/;" | xargs rm ; exit 0; }
 
 ## あったらBKB
-# echo $input
+echo $input
 cat $dir/tmp/clause.txt.$pid | 
 awk -v num=$num '{if(NR>=num && NR <= num+2) print $0}'|
 tr "\n" " " | 
