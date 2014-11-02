@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## 見つけたBKBを集めます. 
+## bkb.tweet/tweetの各ファイルに, BKB1セットを入れます.
 
 dir=$(dirname $0)
 

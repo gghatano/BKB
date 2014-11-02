@@ -8,6 +8,12 @@ echo $file_num
 set +e
 
 ## ひたすらツイート
+
+## ./sumamrise_bkb.bash すると, ./bkb.tweet/tweetにBKBがまとめられます. 
+## ./bkb.tweet/tweet/の各ファイルに, BKB1セットが入っています. 
+## ランダムに選んで, ツイートします. 
+## ~/bkb_tweet.Rを用意してください. 
+
 while true ; do
   random=$(echo $((RANDOM / $file_num + 1)))
   tweet_file=$(ls $dir/bkb.tweet/tweet | awk -v random=$random '{if(NR==random) print $0}')
